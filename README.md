@@ -72,3 +72,20 @@ All AI-generated outputs were reviewed and refined manually.
 ## 🚀 Setup Instructions
 
 ### Install
+
+npm install
+
+
+### Run
+
+npm start
+
+
+---
+
+## 🔐 Environment Variables
+
+Create `.env` file:
+
+
+REACT_APP_API_URL=http://localhost:5000/api
