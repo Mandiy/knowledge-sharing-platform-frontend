@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-slate-800 font-sans antialiased selection:bg-primary-100 selection:text-primary-700;
+  }
+}
+
+@layer components {
+
+  /* Reusable button styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg font-medium shadow-sm hover:bg-primary-700 hover:shadow transition-all disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 bg-white text-slate-700 border border-slate-200 rounded-lg font-medium hover:bg-slate-50 transition-colors disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 bg-transparent text-red-600 border border-red-200 rounded-lg font-medium hover:bg-red-50 transition-colors;
+  }
+
+  /* Form inputs */
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border border-slate-200 rounded-lg text-slate-800 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all placeholder:text-slate-400;
+  }
+
+  /* Cards */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-slate-200/50 shadow-soft rounded-2xl;
+  }
+
+  /* React Quill overrides for Tailwind */
+  .quill-editor .ql-container {
+    @apply font-sans text-lg border-none min-h-[400px];
+  }
+
+  .quill-editor .ql-toolbar {
+    @apply border-none border-b border-slate-200 bg-slate-50 rounded-t-xl font-sans;
+  }
+
+  .quill-editor .ql-editor {
+    @apply p-6 lg:p-8;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-indigo-600;
+  }
+}
